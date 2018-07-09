@@ -2,7 +2,7 @@
 
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-My submission for term 1 project 3, see writeup.md for details.
+My submission for term 1 project 3, see [writeup.md](https://github.com/shunjilin/UdacityCarNDBehavioralCloning/blob/master/writeup.md) for details.
 
 Overview
 ---
