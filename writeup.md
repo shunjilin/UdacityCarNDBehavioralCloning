@@ -1,18 +1,3 @@
-
-Jupyter Notebook
-Untitled Last Checkpoint: 7 minutes ago (unsaved changes) Current Kernel Logo
-
-Python 3
-
-    File
-    Edit
-    View
-    Insert
-    Cell
-    Kernel
-    Widgets
-    Help
-
 # **Behavioral Cloning** 
 
 ​
