@@ -61,6 +61,8 @@ The goals / steps of this project are the following:
 
 [image6]: ./writeup_images/flipped2.jpg
 
+[image7]: ./writeup_images/meansquarederror.png
+
 ​
 
 ## Rubric Points
@@ -90,6 +92,8 @@ My project includes the following files:
 * writeup.md summarizing the results
 
 * log.txt that shows the log details of training the final model.
+
+* run1.mp4 that shows a video of a lap done by the vehicle in autonomous mode using the model 
 
 ​
 
@@ -198,6 +202,10 @@ In order to gauge how well the model was working, I split my image and steering 
 ​
 
 I had to tune the number of epochs in order to reduce underfitting and overfitting. I found that too low an epoch number results in underfitting the training set while too high an epoch number results in overfitting the training set. I finally settled on 10 epochs which gave low mean squared error losses on both the training and validation set.
+
+Here is the mean squared error for the training and validation set over the number of epochs:
+
+![alt text][image7]
 
 ​
 

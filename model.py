@@ -52,6 +52,7 @@ def generate_data():
                 if pos == 2:  # right camera correction
                     angle = correct_right(angle)
                 image = cv2.imread(name)
+                image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
                 output_path = './generated/IMG/' + str(image_count) + '.jpg'
                 cv2.imwrite(output_path, image)
                 image_count += 1
@@ -78,6 +79,7 @@ def generator(samples, batch_size=32):
             for batch_sample in batch_samples:
                 name = batch_sample[0]
                 image = cv2.imread(name)
+                image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
                 angle = float(batch_sample[1])
                 images.append(image)
                 angles.append(angle)
@@ -142,7 +144,7 @@ if __name__ == "__main__":
         verbose=1)
 
     # save model
-    model.save('model.h5')
+    model.save('model2.h5')
 
     # plot the training and validation loss for each epoch
     plt.plot(history_object.history['loss'])
