@@ -160,25 +160,25 @@ It also 2 preprocessing layers, one for normalization and one for cropping.
 
 | convolution2d_1 (Convolution2D)  | (None, 28, 158, 24) |
 
-|convolution2d_2 (Convolution2D)   | (None, 12, 77, 36)  |
+| convolution2d_2 (Convolution2D)  | (None, 12, 77, 36)  |
 
-|convolution2d_3 (Convolution2D)   | (None, 4, 37, 48)   |
+| convolution2d_3 (Convolution2D)  | (None, 4, 37, 48)   |
 
-|convolution2d_4 (Convolution2D)   | (None, 2, 35, 64)   |      
+| convolution2d_4 (Convolution2D)  | (None, 2, 35, 64)   |      
 
-|convolution2d_5 (Convolution2D)   | (None, 1, 34, 64)   |            
+| convolution2d_5 (Convolution2D)  | (None, 1, 34, 64)   |            
  
-|flatten_1 (Flatten)               |(None, 2176)         |       
+| flatten_1 (Flatten)              | (None, 2176)        |       
 
-|dense_1 (Dense)                   | (None, 1164)        |
+| dense_1 (Dense)                  | (None, 1164)        |
 
-|dense_2 (Dense)                   |(None, 100)          |           
+| dense_2 (Dense)                  | (None, 100)         |           
 
-|dense_3 (Dense)                   | (None, 50)          |
+| dense_3 (Dense)                  | (None, 50)          |
 
-|dense_4 (Dense)                   | (None, 10)          |                
+| dense_4 (Dense)                  | (None, 10)          |                
  
-|dense_5 (Dense)                   |(None, 1)            |
+| dense_5 (Dense)                  | (None, 1)           |
 
 ​
 
