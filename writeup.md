@@ -34,7 +34,7 @@ The goals / steps of this project are the following:
 
 [image6]: ./writeup_images/flipped2.jpg
 
-[image7]: ./writeup_images/meansquarederror.png
+[image7]: ./writeup_images/mse.png
 
 
 ## Rubric Points
