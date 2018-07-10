@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.utils import shuffle
 from keras.models import Sequential
-from keras.layers import Flatten, Dense, Lambda
+from keras.layers import Flatten, Dense, Lambda, Dropout
 from keras.layers.convolutional import Convolution2D, Cropping2D
 from tensorflow.python.client import device_lib
 
@@ -127,9 +127,13 @@ if __name__ == "__main__":
                             subsample=(1, 1)))
     model.add(Flatten())
     model.add(Dense(1164, activation="relu"))
+    model.add(Dropout(0.2))
     model.add(Dense(100, activation="relu"))
+    model.add(Dropout(0.2))
     model.add(Dense(50, activation="relu"))
+    model.add(Dropout(0.2))
     model.add(Dense(10, activation="relu"))
+    model.add(Dropout(0.2))
     model.add(Dense(1))
 
     print(model.summary())
@@ -144,7 +148,7 @@ if __name__ == "__main__":
         verbose=1)
 
     # save model
-    model.save('model2.h5')
+    model.save('model.h5')
 
     # plot the training and validation loss for each epoch
     plt.plot(history_object.history['loss'])

@@ -60,8 +60,6 @@ My project includes the following files:
 
 * writeup.md summarizing the results
 
-* log.txt that shows the log details of training the final model.
-
 * run1.mp4 that shows a video of a lap done by the vehicle in autonomous mode using the model 
 
 
@@ -92,15 +90,13 @@ See 2. for the full description of my final model.
 
 #### 2. Attempts to reduce overfitting in the model
 
-Initially I used dropout layers in the fully connected layers to reduce overfitting of the model.
-
-However I found that this hurt the performance (high mean squared error loss) of the model during training quite significantly even with low keep probabilities, and resulted in very long training and iteration times.
-
 Instead I relied on data augmentation techniques to improve the generalizability of the model and reduce overfitting.
 
 Data augmentation includes adding not only the center camera image but also the left and right camera images, and adding an appropriate adjustment factor to the steering angle (+0.2 for left camera and -0.2 for right camera).
 
 Data augmentation also includes adding the flipped images and adjusting the steering angle by taking its negative value.
+
+Furthermore, I added dropout layers after each fully connected layer, with a dropout probability of 0.2, to reduce overfitting on the training data.
 
 The model was trained and validated on different data sets to ensure that the model was not overfitting.
 
@@ -146,6 +142,7 @@ The final model architecture consists of a convolution neural network based on [
 
 It is composed of 5 convolutional layers, 4 fully connected layers and an output layer.
 
+Dropout layers (with dropout probability of 0.2) were added after each fully connected layer.
 
 It also 2 preprocessing layers, one for normalization and one for cropping.
 
@@ -172,11 +169,19 @@ It also 2 preprocessing layers, one for normalization and one for cropping.
 
 | dense_1 (Dense)                  | (None, 1164)        |
 
-| dense_2 (Dense)                  | (None, 100)         |           
+| dropout_1 (Dropout)		   | (None, 1164)	 | 
+
+| dense_2 (Dense)                  | (None, 100)         |
+
+| dropout_2 (Dropout)		   | (None, 100)	 | 
 
 | dense_3 (Dense)                  | (None, 50)          |
 
-| dense_4 (Dense)                  | (None, 10)          |                
+| dropout_3 (Dropout)		   | (None, 50)		 |
+
+| dense_4 (Dense)                  | (None, 10)          |
+
+| dropout_4 (Dropout)		   | (None, 10)	 	 | 
  
 | dense_5 (Dense)                  | (None, 1)           |
 
