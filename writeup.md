@@ -22,7 +22,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 ​
-[image1]: writeup_images/centerlane.jpg
+[image1]: ./writeup_images/centerlane.jpg
 
 [image2]: ./writeup_images/center_2018_07_09_11_10_10_134.jpg
 
@@ -202,6 +202,7 @@ To capture good driving behavior, I recorded two laps on track one using center 
 
 Here is an example image of center lane driving:
 
+<img src="writeup_images/centerlane.jpg" alt="Drawing"/>
 
 ![alt text][image1]
 
