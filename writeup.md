@@ -22,7 +22,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 ​
-[image1]: ./writeup_images/centerlane.jpg
+[image1]: writeup_images/centerlane.jpg
 
 [image2]: ./writeup_images/center_2018_07_09_11_10_10_134.jpg
 
